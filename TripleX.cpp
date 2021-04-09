@@ -1,18 +1,17 @@
 #include <iostream>
 
-void PlayTheGame()
+void PrintIntro()
 {
 
     // std = namespace, cout = is defined in std 
-    std::cout << "Crack the safe code and get the riches!";
+    std::cout << "\n\n Crack the safe code and get the riches!\n";
 
-    // New Line Code
-    std::cout << std::endl; 
+    std::cout << "Enter the right code or get locked out!\n";
 
-    std::cout << "Enter the right code or get locked out!";
+}
 
-    // New Line Code
-    std::cout << std::endl; 
+bool PlayTheGame()
+{
 
     // Initializing variables
     const int FirstSolutionNumber = 4; 
@@ -63,11 +62,13 @@ void PlayTheGame()
     // Testing User Guesses to Correct Answers
     if (SumOfGuesses == SumOfNumbers && ProductOfGuesses == ProductOfNumbers)
     {
-        std::cout << "\n You cracked the code!! Take your riches!!";
+        std::cout << "\n You cracked the code!! Take your riches!!\n";
+        return true;
     }
     else 
     {
-        std::cout << "\n Thats the wrong code you've been locked out!";
+        std::cout << "\n Thats the wrong code you've been locked out!\n";
+        return false;
     }
 
 }
@@ -75,7 +76,15 @@ void PlayTheGame()
 int main()
 {
 
-    PlayTheGame();
+    PrintIntro();
+
+    while (true)
+    {
+        bool bLevelComplete;
+        PlayTheGame();
+        std::cin.clear(); // Clears any errors
+        std::cin.ignore(); // Discards the buffer
+    }
 
     return 0;
 
