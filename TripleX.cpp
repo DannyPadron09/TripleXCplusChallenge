@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+void PlayTheGame()
 {
 
     // std = namespace, cout = is defined in std 
@@ -27,25 +27,25 @@ int main()
 
     // Game instruction / hints
     std::cout << std::endl;
-    std::cout << " - There are 3 numbers in the safe code" << std::endl;
-    std::cout << " - The codes add up to : " << SumOfNumbers << std::endl;
-    std::cout << " - The codes multiply to : " << ProductOfNumbers << std::endl;
+    std::cout << " - There are 3 numbers in the safe code\n";
+    std::cout << "\n - The codes add up to : " << SumOfNumbers;
+    std::cout << "\n - The codes multiply to : " << ProductOfNumbers;
 
     // Variables for User Guesses
     int GuessFirstSolution, GuessSecondSolution, GuessThirdSolution;
     
     // Storing User input for first guess
-    std::cout << "Enter your FIRST guess for the code - ";
+    std::cout << "\n Enter your FIRST guess for the code - ";
     std::cin >> GuessFirstSolution;
     std::cout << std::endl;
 
     // Storing User input for second guess
-    std::cout << "Enter your SECOND guess for the code - ";
+    std::cout << "\n Enter your SECOND guess for the code - ";
     std::cin >> GuessSecondSolution;
     std::cout << std::endl;
 
     // Storing User input for third guess
-    std::cout << "Enter your THIRD guess for the code - ";
+    std::cout << "\n Enter your THIRD guess for the code - ";
     std::cin >> GuessThirdSolution;
     std::cout << std::endl;
 
@@ -56,19 +56,26 @@ int main()
     const int ProductOfGuesses = GuessFirstSolution * GuessSecondSolution * GuessThirdSolution;
 
     // Outputting Sum and Product Variables
-    std::cout << "The sum of your guesses is : " << SumOfGuesses << std::endl;
-    std::cout << "The product of your guesses is : " << ProductOfGuesses << std::endl;
+    std::cout << "\n The sum of your guesses is : " << SumOfGuesses;
+    std::cout << "\n The product of your guesses is : " << ProductOfGuesses;
     std::cout << std::endl;
 
     // Testing User Guesses to Correct Answers
     if (SumOfGuesses == SumOfNumbers && ProductOfGuesses == ProductOfNumbers)
     {
-        std::cout << "You cracked the code!! Take your riches!!";
+        std::cout << "\n You cracked the code!! Take your riches!!";
     }
     else 
     {
-        std::cout << "Thats the wrong code you've been locked out!";
+        std::cout << "\n Thats the wrong code you've been locked out!";
     }
+
+}
+
+int main()
+{
+
+    PlayTheGame();
 
     return 0;
 
