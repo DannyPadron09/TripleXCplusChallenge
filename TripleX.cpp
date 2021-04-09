@@ -18,15 +18,16 @@ int main()
 
     int sumOfNumbers = firstSolutionNumber + secondSolutionNumber + thirdSolutionNumber;
 
-    std::cout << firstSolutionNumber;
-    std::cout << std::endl;
-    std::cout << secondSolutionNumber;
-    std::cout << std::endl;
-    std::cout << thirdSolutionNumber;
-    std::cout << std::endl;
+    int productOfNumbers = firstSolutionNumber * secondSolutionNumber * thirdSolutionNumber;
+
+    std::cout << firstSolutionNumber << std::endl;
+    std::cout << secondSolutionNumber << std::endl;
+    std::cout << thirdSolutionNumber << std:: endl;
 
     // Sum of all 3 variables
-    std::cout << sumOfNumbers;
+    std::cout << sumOfNumbers << std::endl;
+
+    std::cout << productOfNumbers;
 
     return 0;
 
