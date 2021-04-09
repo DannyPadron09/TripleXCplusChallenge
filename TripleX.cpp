@@ -49,12 +49,16 @@ int main()
     std::cin >> GuessThirdSolution;
     std::cout << std::endl;
 
+    // Initializing a Variable with the sum of the User Guesses
+    const int SumOfGuesses = GuessFirstSolution + GuessSecondSolution + GuessThirdSolution;
 
-    std::cout << "Your first guess is : " << GuessFirstSolution << std::endl;
-    std::cout << "Your second guess is : " << GuessSecondSolution << std::endl;
-    std::cout << "Your third guess is : " << GuessThirdSolution << std::endl;
+    // Initializing a Variable with the product of the User Guesses
+    const int ProductOfGuesses = GuessFirstSolution * GuessSecondSolution * GuessThirdSolution;
 
-    
+    // Outputting Sum and Product Variables
+    std::cout << "The sum of your guesses is : " << SumOfGuesses << std::endl;
+    std::cout << "The product of your guesses is : " << ProductOfGuesses << std::endl;
+
     return 0;
 
 }
