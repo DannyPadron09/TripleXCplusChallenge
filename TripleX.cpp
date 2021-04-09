@@ -29,6 +29,13 @@ int main()
 
     std::cout << " - The codes multiply to : " << ProductOfNumbers << std::endl;
 
+    int PlayerGuess;
+    std::cout << "Enter your guess for the code - ";
+    std::cin >> PlayerGuess;
+    std::cout << std::endl;
+
+    std::cout << "You entered : " << PlayerGuess;
+    
     return 0;
 
 }
