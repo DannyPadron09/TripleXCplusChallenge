@@ -62,7 +62,8 @@ bool PlayTheGame(int Difficulty)
     // Testing User Guesses to Correct Answers
     if (SumOfGuesses == SumOfNumbers && ProductOfGuesses == ProductOfNumbers)
     {
-        std::cout << "\n You cracked the code!! Take your riches!!\n";
+        std::cout << "\n You cracked the Level " << Difficulty;
+        std::cout << " code!!\n";
         return true;
     }
     else 
@@ -78,9 +79,10 @@ int main()
 
 
     int LevelDifficulty = 1;
+    const int MaxLevelDifficulty = 5;
 
 
-    while (true)
+    while (LevelDifficulty <= MaxLevelDifficulty) // Loops game until all levels are completed
     {
         bool bLevelComplete = PlayTheGame(LevelDifficulty);
         std::cin.clear(); // Clears any errors
@@ -94,6 +96,8 @@ int main()
         }
         
     }
+
+    std::cout << "\n You finished all levels collect your riches!!!";
 
     return 0;
 
