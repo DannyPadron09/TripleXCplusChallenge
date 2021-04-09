@@ -12,20 +12,22 @@ int main()
 
     std::cout << std::endl; // New Line Code
 
-    const int firstSolutionNumber = 4; // Initializing variables
-    const int secondSolutionNumber = 5;
-    const int thirdSolutionNumber = 6;
+    const int FirstSolutionNumber = 4; // Initializing variables
+    const int SecondSolutionNumber = 5;
+    const int ThirdSolutionNumber = 6;
 
     // Sum of all 3 variables
-    const int sumOfNumbers = firstSolutionNumber + secondSolutionNumber + thirdSolutionNumber;
+    const int SumOfNumbers = FirstSolutionNumber + SecondSolutionNumber + ThirdSolutionNumber;
 
-    const int productOfNumbers = firstSolutionNumber * secondSolutionNumber * thirdSolutionNumber;
+    // Product of all 3 variables
+    const int ProductOfNumbers = FirstSolutionNumber * SecondSolutionNumber * ThirdSolutionNumber;
 
     // Game instruction / hints
+    std::cout << std::endl;
     std::cout << " - There are 3 numbers in the safe code" << std::endl;
-    std::cout << " - The codes add up to : " << sumOfNumbers << std::endl;
+    std::cout << " - The codes add up to : " << SumOfNumbers << std::endl;
 
-    std::cout << " - The codes multiply to : " << productOfNumbers << std::endl;
+    std::cout << " - The codes multiply to : " << ProductOfNumbers << std::endl;
 
     return 0;
 
