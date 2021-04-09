@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void PrintIntro(int Difficulty)
 {
@@ -17,9 +18,9 @@ bool PlayTheGame(int Difficulty)
 
 
     // Initializing variables
-    const int FirstSolutionNumber = 4; 
-    const int SecondSolutionNumber = 5;
-    const int ThirdSolutionNumber = 6;
+    const int FirstSolutionNumber = rand() % Difficulty + Difficulty; 
+    const int SecondSolutionNumber = rand() % Difficulty + Difficulty;
+    const int ThirdSolutionNumber = rand() % Difficulty + Difficulty;
 
     // Sum of all 3 variables
     const int SumOfNumbers = FirstSolutionNumber + SecondSolutionNumber + ThirdSolutionNumber;
@@ -68,7 +69,7 @@ bool PlayTheGame(int Difficulty)
     }
     else 
     {
-        std::cout << "\n Thats the wrong code!\n";
+        std::cout << "\n Thats the wrong code! Try again! \n";
         return false;
     }
 
@@ -77,6 +78,7 @@ bool PlayTheGame(int Difficulty)
 int main()
 {
 
+    srand(time(NULL)); // Creates new random sequence based on time of day
 
     int LevelDifficulty = 1;
     const int MaxLevelDifficulty = 5;
@@ -97,7 +99,7 @@ int main()
         
     }
 
-    std::cout << "\n You finished all levels collect your riches!!!";
+    std::cout << "\n **You finished all levels collect your riches!!!**";
 
     return 0;
 
