@@ -1,17 +1,20 @@
 #include <iostream>
 
-void PrintIntro()
+void PrintIntro(int Difficulty)
 {
 
     // std = namespace, cout = is defined in std 
-    std::cout << "\n\n Crack the safe code and get the riches!\n";
+    std::cout << "\n\n Crack the safe code at level " << Difficulty;
 
-    std::cout << "Enter the right code or get locked out!\n";
+    std::cout << " and get the riches!\n Enter the right code or get locked out!\n";
 
 }
 
-bool PlayTheGame()
+bool PlayTheGame(int Difficulty)
 {
+
+    PrintIntro(Difficulty);
+
 
     // Initializing variables
     const int FirstSolutionNumber = 4; 
@@ -26,7 +29,7 @@ bool PlayTheGame()
 
     // Game instruction / hints
     std::cout << std::endl;
-    std::cout << " - There are 3 numbers in the safe code\n";
+    std::cout << " - There are 3 numbers in the safe code";
     std::cout << "\n - The codes add up to : " << SumOfNumbers;
     std::cout << "\n - The codes multiply to : " << ProductOfNumbers;
 
@@ -36,17 +39,14 @@ bool PlayTheGame()
     // Storing User input for first guess
     std::cout << "\n Enter your FIRST guess for the code - ";
     std::cin >> GuessFirstSolution;
-    std::cout << std::endl;
 
     // Storing User input for second guess
     std::cout << "\n Enter your SECOND guess for the code - ";
     std::cin >> GuessSecondSolution;
-    std::cout << std::endl;
 
     // Storing User input for third guess
     std::cout << "\n Enter your THIRD guess for the code - ";
     std::cin >> GuessThirdSolution;
-    std::cout << std::endl;
 
     // Initializing a Variable with the sum of the User Guesses
     const int SumOfGuesses = GuessFirstSolution + GuessSecondSolution + GuessThirdSolution;
@@ -67,7 +67,7 @@ bool PlayTheGame()
     }
     else 
     {
-        std::cout << "\n Thats the wrong code you've been locked out!\n";
+        std::cout << "\n Thats the wrong code!\n";
         return false;
     }
 
@@ -76,14 +76,23 @@ bool PlayTheGame()
 int main()
 {
 
-    PrintIntro();
+
+    int LevelDifficulty = 1;
+
 
     while (true)
     {
-        bool bLevelComplete;
-        PlayTheGame();
+        bool bLevelComplete = PlayTheGame(LevelDifficulty);
         std::cin.clear(); // Clears any errors
         std::cin.ignore(); // Discards the buffer
+
+
+        if (bLevelComplete)
+        {
+            // Increase Level Difficulty
+            ++LevelDifficulty;
+        }
+        
     }
 
     return 0;
