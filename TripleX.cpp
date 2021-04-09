@@ -6,13 +6,16 @@ int main()
     // std = namespace, cout = is defined in std 
     std::cout << "Crack the safe code and get the riches!";
 
-    std::cout << std::endl; // New Line Code
+    // New Line Code
+    std::cout << std::endl; 
 
     std::cout << "Enter the right code or get locked out!";
 
-    std::cout << std::endl; // New Line Code
+    // New Line Code
+    std::cout << std::endl; 
 
-    const int FirstSolutionNumber = 4; // Initializing variables
+    // Initializing variables
+    const int FirstSolutionNumber = 4; 
     const int SecondSolutionNumber = 5;
     const int ThirdSolutionNumber = 6;
 
@@ -26,15 +29,31 @@ int main()
     std::cout << std::endl;
     std::cout << " - There are 3 numbers in the safe code" << std::endl;
     std::cout << " - The codes add up to : " << SumOfNumbers << std::endl;
-
     std::cout << " - The codes multiply to : " << ProductOfNumbers << std::endl;
 
-    int PlayerGuess;
-    std::cout << "Enter your guess for the code - ";
-    std::cin >> PlayerGuess;
+    // Variables for User Guesses
+    int GuessFirstSolution, GuessSecondSolution, GuessThirdSolution;
+    
+    // Storing User input for first guess
+    std::cout << "Enter your FIRST guess for the code - ";
+    std::cin >> GuessFirstSolution;
     std::cout << std::endl;
 
-    std::cout << "You entered : " << PlayerGuess;
+    // Storing User input for second guess
+    std::cout << "Enter your SECOND guess for the code - ";
+    std::cin >> GuessSecondSolution;
+    std::cout << std::endl;
+
+    // Storing User input for third guess
+    std::cout << "Enter your THIRD guess for the code - ";
+    std::cin >> GuessThirdSolution;
+    std::cout << std::endl;
+
+
+    std::cout << "Your first guess is : " << GuessFirstSolution << std::endl;
+    std::cout << "Your second guess is : " << GuessSecondSolution << std::endl;
+    std::cout << "Your third guess is : " << GuessThirdSolution << std::endl;
+
     
     return 0;
 
