@@ -58,6 +58,17 @@ int main()
     // Outputting Sum and Product Variables
     std::cout << "The sum of your guesses is : " << SumOfGuesses << std::endl;
     std::cout << "The product of your guesses is : " << ProductOfGuesses << std::endl;
+    std::cout << std::endl;
+
+    // Testing User Guesses to Correct Answers
+    if (SumOfGuesses == SumOfNumbers && ProductOfGuesses == ProductOfNumbers)
+    {
+        std::cout << "You cracked the code!! Take your riches!!";
+    }
+    else 
+    {
+        std::cout << "Thats the wrong code you've been locked out!";
+    }
 
     return 0;
 
