@@ -21,14 +21,11 @@ int main()
 
     const int productOfNumbers = firstSolutionNumber * secondSolutionNumber * thirdSolutionNumber;
 
-    std::cout << firstSolutionNumber << std::endl;
-    std::cout << secondSolutionNumber << std::endl;
-    std::cout << thirdSolutionNumber << std:: endl;
+    // Game instruction / hints
+    std::cout << " - There are 3 numbers in the safe code" << std::endl;
+    std::cout << " - The codes add up to : " << sumOfNumbers << std::endl;
 
-    std::cout << "There are 3 numbers in the safe code" << std::endl;
-    std::cout << "The codes add up to : " << sumOfNumbers << std::endl;
-
-    std::cout << "The codes multiply to : " << productOfNumbers << std::endl;
+    std::cout << " - The codes multiply to : " << productOfNumbers << std::endl;
 
     return 0;
 
