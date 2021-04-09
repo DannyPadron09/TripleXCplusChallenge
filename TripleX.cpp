@@ -12,9 +12,21 @@ int main()
 
     std::cout << std::endl; // New Line Code
 
-    int a = 4; // Initializing variable
+    int firstSolutionNumber = 4; // Initializing variables
+    int secondSolutionNumber = 5;
+    int thirdSolutionNumber = 6;
 
-    std::cout << a;
+    int sumOfNumbers = firstSolutionNumber + secondSolutionNumber + thirdSolutionNumber;
+
+    std::cout << firstSolutionNumber;
+    std::cout << std::endl;
+    std::cout << secondSolutionNumber;
+    std::cout << std::endl;
+    std::cout << thirdSolutionNumber;
+    std::cout << std::endl;
+
+    // Sum of all 3 variables
+    std::cout << sumOfNumbers;
 
     return 0;
 
